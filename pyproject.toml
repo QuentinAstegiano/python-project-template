@@ -1,0 +1,10 @@
+[project]
+name = "python-project-template"
+version = "0.1.0"
+description = "Python FastApi project template"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.12",
+    "fastapi-cli>=0.0.7",
+]
