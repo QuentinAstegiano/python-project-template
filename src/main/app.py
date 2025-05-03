@@ -8,14 +8,14 @@ from pydantic import BaseModel
 class TemplateApp(FastAPI):
     """Template Application to show off a FastAPI implementation"""
 
-    def __init__(self):
+    def __init__(self, compute_service: service.ComputeService):
         super(TemplateApp, self).__init__(
             title="python-project-template", version="dev"
         )
-        self.compute_service = service.ComputeService()
+        self.compute_service = compute_service
 
 
-app = TemplateApp()
+app = TemplateApp(service.ComputeService())
 
 
 class ComputeResult(BaseModel):
