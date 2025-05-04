@@ -26,7 +26,6 @@ class HaikuService:
 
     def get(self) -> list[str]:
         answer = self.remote_source.get_remote_haiku()
-        print(answer)
         poem = self._parse(answer, "#####")
         if self._check(poem):
             return poem
